@@ -1,11 +1,11 @@
 import random
-rapid_acc = 0.7247
+rapid_acc = 0.7247 #Accuracy and max hit of rapid with no rigour
 rapid_max = 59
-rapid_rigour_acc = 0.7673
+rapid_rigour_acc = 0.7673 #Accuracy and max hit of rapid with rigour
 rapid_rigour_max = 72
-accurate_rigour_acc = 0.7722
+accurate_rigour_acc = 0.7722 #Accuracy and max hit of accurate with rigour
 accurate_rigour_max = 74
-number_of_players = 2
+number_of_players = 2 #Number of players in the raid
 teleportedIn = int(number_of_players / 2)
 if number_of_players % 2 != 0:
 	teleportedIn = teleportedIn + 1
@@ -16,7 +16,7 @@ def applyVeng(number_of_players, teleportedIn):
 	recoiled_damage = number_of_players * int(damage_per_person * 0.75) + int(damage_per_person * 0.1)
 	return recoiled_damage
 
-vasa_hitpoints = 576 - applyVeng(number_of_players, teleportedIn)
+vasa_hitpoints = 576 - applyVeng(number_of_players, teleportedIn) #HP of vasa in the current scale
 
 def simHit(accuracy, maxHit):
 	accuracy_rand = random.uniform(0,1)
@@ -67,4 +67,4 @@ def main(x):
 		pass
 
 if __name__ == '__main__':
-	main(1000000)
+	main(1000000) #Number of times to run the simulator
